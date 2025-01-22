@@ -1,0 +1,68 @@
+.trackingPage {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: rgb(249, 249, 249);
+    min-height: 100vh;
+    min-width: 100vw;
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.searchBar {
+    display: block;
+    width: calc(100% - 40px);
+    max-width: 600px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.trackingContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.trackingCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.trackingCard:hover {
+    transform: translateY(-5px);
+}
+
+
+.cardHeader {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+.trackingCard p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.trackingCard p strong {
+    color: #333;
+}
