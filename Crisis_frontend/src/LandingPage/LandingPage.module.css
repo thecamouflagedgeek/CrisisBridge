@@ -1,0 +1,35 @@
+.style{
+    background-image: url('./assets/Crisis.jpg');
+    width: 97vw;
+    height: 95vh;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.heading{
+    font-size: 100px;
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.para{
+    font-size: 30px;
+}
+.card{
+    border: 1px solid  rgb(158, 158, 158);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.199);
+    padding: 20px;
+    margin: 10px;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(33, 35, 36, 0.907);
+}
+.button{
+    background-color: #3b3e43;
+}

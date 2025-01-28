@@ -1,0 +1,73 @@
+/* HomePage.css */
+
+.homepageContainer {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    min-width: 97vw;
+    min-height: auto;
+  }
+  
+  .heroSection {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+  }
+
+  .heroSection h1{
+    color:#0f0f0f;
+  }
+  
+  .heroSection h3 {
+    color: #006600;
+    font-weight: bold;
+  }
+  
+  .heroDescription {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .searchBar {
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  .searchInput {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .productListing {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .productCard {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .listProductButton {
+    background-color: #006600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .listProductButton:hover {
+    background-color: #004d00;
+  }
+  
