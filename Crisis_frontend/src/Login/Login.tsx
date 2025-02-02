@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 
 type UserType = "customer" | "business";
@@ -7,6 +8,7 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [userType, setUserType] = useState<UserType>("customer");
+  const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,6 +26,9 @@ const Login: React.FC = () => {
     setEmail("");
     setPassword("");
     setUserType("customer");
+
+    // Redirect to home page after login
+    navigate("/");
 
     // Backend API call (example structure)
     // fetch("/api/login", {
@@ -97,3 +102,4 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+

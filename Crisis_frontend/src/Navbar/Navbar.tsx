@@ -10,6 +10,7 @@ const Navbar: React.FC = () => {
             {/* <Link to="/for-business" style={linkStyle}>For Business</Link>
             <Link to="/for-customer" style={linkStyle}>For Customer</Link> */}
             <Link to="/login" style={linkStyle}>Login</Link>
+            <Link to="/settings" style={linkStyle}>Settings</Link>
         </nav>
     );
 };
