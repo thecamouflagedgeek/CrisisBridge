@@ -1,4 +1,4 @@
-.container{
+.container {
     background-color: rgb(102, 102, 102);
     background-size: cover;
     width: 97vw;
@@ -28,14 +28,27 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.piechart{
+/* Left Section (Pie Chart & Google Map) */
+.leftSection {
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.cardContent{
+/* Pie Chart */
+.pieChart {
+    margin-bottom: 20px;
+}
+
+/* Google Map */
+.mapContainer {
+    border-radius: 10px;
+}
+
+/* Right Section (Text Content) */
+.cardContent {
     flex: 2;
     text-align: left;
     padding-left: 20px;
