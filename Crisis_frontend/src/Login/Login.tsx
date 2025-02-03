@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 
-type UserType = "customer" | "business";
+type UserType = "" | "";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [userType, setUserType] = useState<UserType>("customer");
+  const [userType, setUserType] = useState<UserType>("");
   const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent) => {
@@ -25,7 +25,7 @@ const Login: React.FC = () => {
     // Clear the fields after login
     setEmail("");
     setPassword("");
-    setUserType("customer");
+    setUserType("");
 
     // Redirect to home page after login
     navigate("/");
@@ -57,8 +57,9 @@ const Login: React.FC = () => {
               value={userType}
               onChange={(e) => setUserType(e.target.value as UserType)}
             >
-              <option value="customer">Customer</option>
-              <option value="business">Business</option>
+              <option value="User/Victim">User/Victim</option>
+              <option value="Volunteer">Volunteer</option>
+              <option value="NGO">NGO</option>
             </select>
           </div>
           <div className={styles.formGroup}>
