@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 
-type UserType = "" | "";
+type UserType = "User/Victim" | "Volunteer" | "NGO";
 
-const Login: React.FC = () => {
+interface LoginProps {
+  setUserRole: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+const Login: React.FC<LoginProps> = ({ setUserRole }) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [userType, setUserType] = useState<UserType>("");
+  const [userType, setUserType] = useState<UserType>("User/Victim"); // Default to a valid user type
+
   const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent) => {
@@ -22,10 +27,13 @@ const Login: React.FC = () => {
 
     console.log("Login data:", loginData);
 
+    // Set user role based on userType
+    setUserRole(userType);
+
     // Clear the fields after login
     setEmail("");
     setPassword("");
-    setUserType("");
+    setUserType("User/Victim"); // Reset to default
 
     // Redirect to home page after login
     navigate("/");
@@ -105,4 +113,3 @@ const Login: React.FC = () => {
 };
 
 export default Login;
-

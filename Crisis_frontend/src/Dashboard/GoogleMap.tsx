@@ -1,16 +1,26 @@
 import React from "react";
 
-const GoogleMap: React.FC = () => {
+interface GoogleMapProps {
+  location: { lat: number; lng: number };
+}
+
+const GoogleMap: React.FC<GoogleMapProps> = ({ location }) => {
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
+  if (!apiKey) {
+    return <p>Please set the Google Maps API key in the environment variables.</p>;
+  }
+
   return (
     <iframe
       title="Google Map"
-      width="250"
-      height="250"
+      width="100%"
+      height="300"
       style={{ border: "0", borderRadius: "10px" }}
       loading="lazy"
       allowFullScreen
       referrerPolicy="no-referrer-when-downgrade"
-      src={`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Mumbai`}
+      src={`https://www.google.com/maps/embed/v1/view?key=${apiKey}&center=${location.lat},${location.lng}&zoom=14`}
     ></iframe>
   );
 };

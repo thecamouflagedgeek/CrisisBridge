@@ -1,4 +1,3 @@
-// src/Navbar.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -7,8 +6,6 @@ const Navbar: React.FC = () => {
         <nav style={navbarStyle}>
             <Link to="/" style={linkStyle}>Home</Link>
             <Link to="/about" style={linkStyle}>Contact</Link>
-            {/* <Link to="/for-business" style={linkStyle}>For Business</Link>
-            <Link to="/for-customer" style={linkStyle}>For Customer</Link> */}
             <Link to="/login" style={linkStyle}>Login</Link>
             <Link to="/settings" style={linkStyle}>Settings</Link>
         </nav>
